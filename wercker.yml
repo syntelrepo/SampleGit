@@ -1,0 +1,15 @@
+# Use android box because it has gradle...
+box: wercker/android
+# Build definition
+build:
+  # The steps that will be executed on build
+  steps:
+    - script:
+        name: show base information
+        code: |
+          gradle -v
+    # A step that executes `gradle build` command
+    - script:
+        name: run gradle
+        code: |
+          ./gradlew --full-stacktrace -q --project-cache-dir=$WERCKER_CACHE_DIR build
