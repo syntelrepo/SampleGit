@@ -1,6 +1,0 @@
----
-applications:
-- name: springboot-first-1072
-  memory: 512M
-  host: springboot-first-1072
-  path: target/gs-spring-boot-0.1.0.jar
